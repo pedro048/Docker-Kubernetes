@@ -143,4 +143,54 @@ CMD ["node", "server.js"]
 
 --------------------------------------------------------------------------------------------------------
 
+# Python with docker
+
+FROM python
+
+WORKDIR /app
+
+COPY . /app
+
+CMD ["python", "rng.py"]
+
+# docker build .
+
+# docker run -it <docker image> (cria o container e deixa ele interativo)
+=> Depois que terminar a interação, o container para de rodar
+
+# docker start -a -i <container name> (restart do container)
+=> Depois que terminar a interação, o container para de rodar
+
+--------------------------------------------------------------------------------------------------------
+
+# Deleting images and containers
+
+--------------------------------------------------------------------------------------------------------
+
+# Deleting containers
+
+=> docker rm <container name> (somente para containers que não estão rodando)
+=> docker rm <container name> <container name> <container name> ...
+
+=> Deletar todos os containers de uma só vez
+=> docker container prune
+
+=> --rm (remove o container automaticamente quando ele para de rodar)
+=> docker run -p 3000:80 -d --rm fb3cd16af0ae
+
+--------------------------------------------------------------------------------------------------------
+
+# Deleting images
+
+=> List images
+=> docker images
+
+=> docker rmi <image id> (Só é possível remover, se a imagem não estiver sendo usada por containers)
+=> docker rmi <image id> <image id> <image id> ...
+
+=> Deletar todos as imagens de uma só vez
+=> docker image prune
+
+
+
 
