@@ -233,3 +233,32 @@ Obs: if you want to remove ALL tagged images, you need to run
 
 Obs: é possível substituir <image id> por name:tag
 
+=> retag
+=> docker tag old_name new_name (isso cria um clone da imagem que foi retagged)
+
+--------------------------------------------------------------------------------------------------------
+
+Sharing Images & Containers
+=> Pushing Images to DockerHub
+
+--------------------------------------------------------------------------------------------------------
+
+# Using Docker Hub
+
+--------------------------------------------------------------------------------------------------------
+
+=> docker login
+=> docker logout
+
+=> docker push <image name>
+=> docker push pedro048/node-hello-world
+
+=> docker pull <image name> (sempre usar para pegar as imagens mais atualizadas)
+=> docker pull pedro048/node-hello-world
+
+=> todos as imagens precisam ter esse nome (tag): pedro048/node-hello-world
+
+=> docker run -p 8000:3000 -d --rm pedro048/node-hello-world
+
+
+
