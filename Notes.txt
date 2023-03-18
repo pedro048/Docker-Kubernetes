@@ -191,6 +191,45 @@ CMD ["python", "rng.py"]
 => Deletar todos as imagens de uma só vez
 => docker image prune
 
+--------------------------------------------------------------------------------------------------------
 
+# Learning more about an image
 
+=> docker image inspect <image id>
+
+--------------------------------------------------------------------------------------------------------
+
+# Copiar elementos para dentro de containers ou para fora
+
+--------------------------------------------------------------------------------------------------------
+
+=> docker cp dummy/. <nome do container>:/test (Copia elementos para dentro de containers)
+=> copia todos os arquivos da pasta dummy para dentro do container especificado na pasta test (se não existir, é criada)
+
+--------------------------------------------------------------------------------------------------------
+
+=> docker cp <nome do container>:/test dummy (Copia elementos para fora de containers)
+=> copia todos os arquivos da pasta test, dentro do container, para uma pasta externa ao container chamada dummy (se não existir, é criada)
+
+--------------------------------------------------------------------------------------------------------
+
+Naming & Tagging Containers and Images
+
+--------------------------------------------------------------------------------------------------------
+
+# Naming Containers
+
+=> docker run -p 3000:80 -d --rm --name goalsApp <image id>
+
+--------------------------------------------------------------------------------------------------------
+
+# Tagging Images
+
+=> docker build -t goals:latest .
+=> docker build -t name:tag .
+
+Obs: if you want to remove ALL tagged images, you need to run
+=> docker image prune -a
+
+Obs: é possível substituir <image id> por name:tag
 
