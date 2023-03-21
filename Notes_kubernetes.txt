@@ -1,0 +1,43 @@
+# minikube start
+
+# minikube status
+
+# kubectl get deployments
+
+# kubectl get services
+
+# docker build -t pedro048/kub-tactile-website .
+
+# docker push pedro048/kub-tactile-website
+
+# kubectl apply -f=tactile_website.yaml
+
+# kubectl get pods
+
+# kubectl logs <pod_name>
+
+# kubectl delete pods <pod_name>
+
+# kubectl delete -f tactile_website.yaml
+
+# kubectl expose deployment deployment-name --type=LoadBalancer --port=3000
+
+# minikube service deployment-name
+
+# kubectl delete service <service-name>
+
+# kubectl apply -f=tactile_website-service.yaml
+
+# minikube service tactile-website-service
+
+# kubectl create -f mongodb.yaml
+
+# kubectl get svc
+
+# kubectl get pods
+
+# kubectl create -f tactile-website.yaml
+
+# kubectl get svc
+
+# kubectl get pods

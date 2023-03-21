@@ -266,7 +266,7 @@ Sharing Images & Containers
 
 => docker run --name mongodb --rm -d -p 27017:27017 mongo
 
-=> docker run --name mongodb -v data:/data/db --rm -d --network tactile_website-net mongo 
+=> docker run --name mongodb -v data:/data/db -d --network tactile_website-net mongo 
 
 => docker exec -it <CONTAINER_NAME> bash
 
@@ -276,13 +276,13 @@ Sharing Images & Containers
 
 => docker network create tactile_website-net
 
-=> docker run --name mongodb -v data:/data/db --rm -d --network tactile_website-net mongo 
+=> docker run --name mongodb -v data:/data/db -d --network tactile_website-net mongo 
 
 => docker build -t tactile_website_img:latest .
 
 => docker run -p 3000:3000 --name tactile_website --network tactile_website-net tactile_website_img
 
-=> docker stop tcatile_website
+=> docker stop tactile_website
 
 => docker start -a tactile_website
 
