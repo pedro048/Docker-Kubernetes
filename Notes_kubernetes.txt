@@ -1,4 +1,4 @@
-# minikube start
+# minikube start --driver=docker
 
 # minikube status
 
@@ -41,3 +41,23 @@
 # kubectl get svc
 
 # kubectl get pods
+
+# minikube ip
+
+# kubectl describe svc mongodb-service
+
+# kubectl get endpoints tactile-website-service
+
+------------------------------------------------
+# kubectl apply -f=deployment-file.yaml
+# kubectl expose deployment deployment-name --type=NodePort --port=3000
+# kubectl port-forward svc/service-name 3000:3000
+=> /acessar localhost:3000
+------------------------------------------------
+
+
+mongoose.connect(`mongodb://${process.env.MONGODB_SERVICE_SERVICE_HOST}/tactileSensationsDB`,
+
+mongoose.connect("mongodb://localhost:27017/tactileSensationsDB",
+
+192.168.99.100
