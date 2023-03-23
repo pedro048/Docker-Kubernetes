@@ -53,8 +53,19 @@
 # kubectl expose deployment deployment-name --type=NodePort --port=3000
 # kubectl port-forward svc/service-name 3000:3000
 => /acessar localhost:3000
+# kubectl exec -it <mongodb-pod-name> bash
+=> mongosh
+=> show dbs
+=> use <db-name>
+=> show collections
+=> db.<collection-name>.find()
 ------------------------------------------------
 
+-----------------------------------------------
+# "mongodb://tasksdb:6004/nameOfDatabase"
+# "mongodb://mongodb-deployment:27017/tactileSensationsDB"
+# "mongodb://<service-name>:27017/<DB-name>"
+-----------------------------------------------
 
 mongoose.connect(`mongodb://${process.env.MONGODB_SERVICE_SERVICE_HOST}/tactileSensationsDB`,
 
