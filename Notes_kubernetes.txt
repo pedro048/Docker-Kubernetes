@@ -1,5 +1,7 @@
 # minikube start --driver=docker
 
+# minikube stop
+
 # minikube status
 
 # kubectl get deployments
@@ -59,6 +61,13 @@
 => use <db-name>
 => show collections
 => db.<collection-name>.find()
+------------------------------------------------
+
+------------------------------------------------
+# kubectl apply -f=host-pv.yaml
+# kubectl apply -f=host-pvc.yaml
+# kubectl apply -f=mongodb-deployment.yaml
+# kubectl expose deployment mongodb-deployment --type=NodePort --port=27017
 ------------------------------------------------
 
 -----------------------------------------------
