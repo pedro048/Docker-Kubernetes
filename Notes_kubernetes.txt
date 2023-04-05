@@ -81,3 +81,41 @@ mongoose.connect(`mongodb://${process.env.MONGODB_SERVICE_SERVICE_HOST}/tactileS
 mongoose.connect("mongodb://localhost:27017/tactileSensationsDB",
 
 192.168.99.100
+
+
+----------------------------------------
+
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: meu-pod
+spec:
+  containers:
+    - name: meu-container
+      image: minha-imagem
+      volumeMounts:
+        - name: dev-ttyUSB0
+          mountPath: /dev/ttyUSB0
+  volumes:
+    - name: dev-ttyUSB0
+      hostPath:
+        path: /dev/ttyUSB0
+
+# minikube ssh
+=> sudo chmod 666 /dev/ttyUSB0
+=> sudo chown root:root /dev/ttyUSB0
+=> minikube mount /dev/ttyUSB0:/dev/ttyUSB0
+=> ls -l /dev/ttyUSB0
+
+
+--------------------------------------------
+
+Minikube with VM
+
+# sudo apt install virtualbox
+# sudo apt install kubectl
+# curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && sudo install minikube-linux-amd64 /usr/local/bin/minikube
+# minikube start --vm-driver=virtualbox
+# kubectl cluster-info
+
+
