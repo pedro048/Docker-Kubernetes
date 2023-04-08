@@ -119,3 +119,7 @@ Minikube with VM
 # kubectl cluster-info
 
 
+---------------------------------------------------------
+
+minikube start --docker-env=DOCKER_OPTS="--device=/dev/ttyUSB0"
+
