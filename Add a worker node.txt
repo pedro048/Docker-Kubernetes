@@ -1,0 +1,25 @@
+kubeadm token list
+kubeadm token delete <token-id>
+kubeadm token create --print-join-command
+ewqxip.db46mwnlg2tbjvhb
+sudo swapoff -a
+sudo vim /etc/fstab
+=> Comentar a parte com swap
+free -m 
+sudo apt-get update && sudo apt-get install -y apt-transport-https curl 
+sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+sudo systemctl enable docker
+kubeadm join 10.0.2.15:6443 --token 905l88.rcf9akv8z6o3kd1o \
+    --discovery-token-ca-cert-hash sha256:e05bbc1fe0c4947fb5308ee3acdd79d87432bd225cfa522f25dfda640cdd8e3e
+kubectl get nodes
+kubectl label node kubernetes-worker3 newnode=worker3
+
+spec:
+	nodeSelector:
+		newnode: worker3
+	containers:
+	- name: ----- 
+	image: -----
+
+
+
